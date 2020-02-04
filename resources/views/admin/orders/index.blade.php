@@ -14,11 +14,11 @@
                     <table class="table table-hover table-bordered" id="sampleTable">
                         <thead>
                         <tr>
-                            <th> Order Number </th>
-                            <th> Placed By </th>
-                            <th class="text-center"> Total Amount </th>
-                            <th class="text-center"> Items Qty </th>
-                            <th class="text-center"> Payment Status </th>
+                            <th> Numéro de commande </th>
+                            <th> Passée par </th>
+                            <th class="text-center"> Montant Total </th>
+                            <th class="text-center"> Nombre d'article </th>
+                            <th class="text-center"> Status du Paiement</th>
                             <th class="text-center"> Status </th>
                             <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
                         </tr>
@@ -28,13 +28,13 @@
                             <tr>
                                 <td>{{ $order->order_number }}</td>
                                 <td>{{ $order->user->fullName }}</td>
-                                <td class="text-center">{{ config('settings.currency_symbol') }}{{ $order->grand_total }}</td>
+                                <td class="text-center">{{ config('settings.currency_symbol') }}{{ round($order->grand_total, 2) }}</td>
                                 <td class="text-center">{{ $order->item_count }}</td>
                                 <td class="text-center">
                                     @if ($order->payment_status == 1)
-                                        <span class="badge badge-success">Completed</span>
+                                        <span class="badge badge-success">Complété</span>
                                     @else
-                                        <span class="badge badge-danger">Not Completed</span>
+                                        <span class="badge badge-danger">Non Complété</span>
                                     @endif
                                 </td>
                                 <td class="text-center">

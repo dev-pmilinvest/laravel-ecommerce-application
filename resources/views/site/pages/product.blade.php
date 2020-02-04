@@ -53,14 +53,17 @@
                                     <dl class="row">
                                         <dt class="col-sm-3">SKU</dt>
                                         <dd class="col-sm-9">{{ $product->sku }}</dd>
-                                        <dt class="col-sm-3">Weight</dt>
+                                        <dt class="col-sm-3">Poids</dt>
                                         <dd class="col-sm-9">{{ $product->weight }}</dd>
                                     </dl>
                                     <div class="mb-3">
                                         @if ($product->sale_price > 0)
                                             <var class="price h3 text-danger">
                                                 <span class="currency">{{ config('settings.currency_symbol') }}</span><span class="num" id="productPrice">{{ $product->sale_price }}</span>
+
+                                                @if($product->sale_price < $product->price)
                                                 <del class="price-old"> {{ config('settings.currency_symbol') }}{{ $product->price }}</del>
+                                                @endif
                                             </var>
                                         @else
                                             <var class="price h3 text-success">
@@ -76,8 +79,9 @@
                                                 <dl class="dlist-inline">
                                                     @foreach($attributes as $attribute)
                                                         @php
-                                                            if ($product->$attributes->count() > 0) {
-                                                                $attributeCheck = in_array($attribute->id, $product->attributes->pluck('attribute_id')->toArray())
+                                                            
+                                                            if (true) {
+                                                                $attributeCheck = in_array($attribute->id, $product->attributes->pluck('attribute_id')->toArray());
                                                             } else {
                                                                 $attributeCheck = [];
                                                             }
@@ -86,12 +90,12 @@
                                                             <dt>{{ $attribute->name }}: </dt>
                                                             <dd>
                                                                 <select class="form-control form-control-sm option" style="width:180px;" name="{{ strtolower($attribute->name ) }}">
-                                                                    <option data-price="0" value="0"> Select a {{ $attribute->name }}</option>
+                                                                    <option data-price="0" value="0"> Choisir {{ $attribute->name }}</option>
                                                                     @foreach($product->attributes as $attributeValue)
                                                                         @if ($attributeValue->attribute_id == $attribute->id)
                                                                             <option
                                                                                 data-price="{{ $attributeValue->price }}"
-                                                                                value="{{ $attributeValue->value }}"> {{ ucwords($attributeValue->value . ' +'. $attributeValue->price) }}
+                                                                                value="{{ $attributeValue->value }}"> {{ ucwords($attributeValue->value ) }}
                                                                             </option>
                                                                         @endif
                                                                     @endforeach
@@ -116,7 +120,7 @@
                                             </div>
                                         </div>
                                         <hr>
-                                        <button type="submit" class="btn btn-success"><i class="fas fa-shopping-cart"></i> Add To Cart</button>
+                                        <button type="submit" class="btn btn-success"><i class="fas fa-shopping-cart"></i> Ajouter au pannier</button>
                                     </form>
                                 </article>
                             </aside>

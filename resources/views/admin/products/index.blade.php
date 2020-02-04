@@ -6,7 +6,7 @@
             <h1><i class="fa fa-shopping-bag"></i> {{ $pageTitle }}</h1>
             <p>{{ $subTitle }}</p>
         </div>
-        <a href="{{ route('admin.products.create') }}" class="btn btn-primary pull-right">Add Product</a>
+        <a href="{{ route('admin.products.create') }}" class="btn btn-primary pull-right">Ajouter un Produit</a>
     </div>
     @include('admin.partials.flash')
     <div class="row">
@@ -41,9 +41,9 @@
                                     <td>{{ config('settings.currency_symbol') }}{{ $product->price }}</td>
                                     <td class="text-center">
                                         @if ($product->status == 1)
-                                            <span class="badge badge-success">Active</span>
+                                            <span class="badge badge-success">Actif</span>
                                         @else
-                                            <span class="badge badge-danger">Not Active</span>
+                                            <span class="badge badge-danger">Non Actif</span>
                                         @endif
                                     </td>
                                     <td class="text-center">

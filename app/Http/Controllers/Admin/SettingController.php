@@ -21,7 +21,7 @@ class SettingController extends BaseController
      */
     public function index()
     {
-        $this->setPageTitle('Settings', 'Manage Settings');
+        $this->setPageTitle('Configuration', 'Configuration du site');
         return view('admin.settings.index');
     }
 

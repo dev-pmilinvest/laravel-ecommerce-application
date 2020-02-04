@@ -20,7 +20,7 @@ class CartController extends Controller
         if (Cart::isEmpty()) {
             return redirect('/');
         }
-        return redirect()->back()->with('message', 'Item removed from cart successfully.');
+        return redirect()->back()->with('message', 'Article retiré du pannier avec succès.');
     }
 
     public function clearCart()

@@ -6,6 +6,25 @@ UIkit bootstrap-ecommerce.com
 html {
   font-size: 15px; }
 
+
+  div#header-message-call.row {
+    background-color: #0250A1;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    justify-items: flex-end;
+    align-items: flex-center;
+    font-size: large;
+    padding: 1rem;
+
+  }
+  div#header-nav {
+
+    padding: 1rem;
+
+  }
+
+
 /* ================== HELPERS  =================== */
 a:hover {
   text-decoration: none; }
@@ -2250,4 +2269,11 @@ ul.row, ul.row-sm {
     display: block;
     margin-left: 0px; }
 
+    .card-product {
+      box-shadow: 6px 6px 2px 1px rgba(0, 0, 0, 0.5);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: 
+      #0f4ba0;
+  }
 /*# sourceMappingURL=ui.css.map */

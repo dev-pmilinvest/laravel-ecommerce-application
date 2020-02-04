@@ -3,7 +3,7 @@
 @section('content')
     <section class="section-pagetop bg-dark">
         <div class="container clearfix">
-            <h2 class="title-page">My Account - Orders</h2>
+            <h2 class="title-page">Mes commandes</h2>
         </div>
     </section>
     <section class="section-content bg padding-y border-top">
@@ -15,12 +15,12 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">Order No.</th>
-                                <th scope="col">First Name</th>
-                                <th scope="col">Last Name</th>
-                                <th scope="col">Order Amount</th>
-                                <th scope="col">Qty.</th>
-                                <th scope="col">Status</th>
+                                <th scope="col">Commande No.</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">Montant de la commande</th>
+                                <th scope="col">Quantité</th>
+                                <th scope="col">Statut</th>
                             </tr>
                         </thead>
                         <tbody>

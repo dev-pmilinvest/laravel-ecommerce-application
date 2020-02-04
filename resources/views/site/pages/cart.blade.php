@@ -1,9 +1,9 @@
 @extends('site.app')
-@section('title', 'Shopping Cart')
+@section('title', 'Pannier')
 @section('content')
     <section class="section-pagetop bg-dark">
         <div class="container clearfix">
-            <h2 class="title-page">Cart</h2>
+            <h2 class="title-page">Pannier</h2>
         </div>
     </section>
     <section class="section-content bg padding-y border-top">
@@ -18,15 +18,15 @@
             <div class="row">
                 <main class="col-sm-9">
                     @if (\Cart::isEmpty())
-                        <p class="alert alert-warning">Your shopping cart is empty.</p>
+                        <p class="alert alert-warning">Votre pannier est vide.</p>
                     @else
                         <div class="card">
                             <table class="table table-hover shopping-cart-wrap">
                                 <thead class="text-muted">
                                 <tr>
-                                    <th scope="col">Product</th>
-                                    <th scope="col" width="120">Quantity</th>
-                                    <th scope="col" width="120">Price</th>
+                                    <th scope="col">Produit</th>
+                                    <th scope="col" width="120">Quantité</th>
+                                    <th scope="col" width="120">Prix</th>
                                     <th scope="col" class="text-right" width="200">Action</th>
                                 </tr>
                                 </thead>
@@ -52,7 +52,7 @@
                                         <td>
                                             <div class="price-wrap">
                                                 <var class="price">{{ config('settings.currency_symbol'). $item->price }}</var>
-                                                <small class="text-muted">each</small>
+                                                <small class="text-muted">chacun</small>
                                             </div>
                                         </td>
                                         <td class="text-right">
@@ -66,8 +66,8 @@
                     @endif
                 </main>
                 <aside class="col-sm-3">
-                    <a href="{{ route('checkout.cart.clear') }}" class="btn btn-danger btn-block mb-4">Clear Cart</a>
-                    <p class="alert alert-success">Add USD 5.00 of eligible items to your order to qualify for FREE Shipping. </p>
+                    <a href="{{ route('checkout.cart.clear') }}" class="btn btn-danger btn-block mb-4">Vider le pannier</a>
+                    <p class="alert alert-success">Frais de port offerts à partir de 49.00€. </p>
                     <dl class="dlist-align h4">
                         <dt>Total:</dt>
                         <dd class="text-right"><strong>{{ config('settings.currency_symbol') }}{{ \Cart::getSubTotal() }}</strong></dd>
@@ -82,11 +82,11 @@
                     <figure class="itemside mb-3">
                         <aside class="aside"> <img src="{{ asset('frontend/images/icons/pay-mastercard.png') }}"> </aside>
                         <div class="text-wrap small text-muted">
-                            Pay by MasterCard and Save 40%.
-                            <br> Lorem ipsum dolor
+                            Pay by MasterCard.
+                            <br> Crésir Agricole 3D sécure
                         </div>
                     </figure>
-                    <a href="{{ route('checkout.index') }}" class="btn btn-success btn-lg btn-block">Proceed To Checkout</a>
+                    <a href="{{ route('checkout.index') }}" class="btn btn-success btn-lg btn-block">Commander</a>
                 </aside>
             </div>
         </div>

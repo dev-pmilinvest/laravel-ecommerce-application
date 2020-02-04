@@ -11,9 +11,20 @@
 |
 */
 
-Route::view('/', 'site.pages.homepage');
+Route::view('/conditions-generales-de-ventes', 'site.pages.conditions-generales-de-ventes')->name('conditions-generales-de-ventes');
+Route::view('/bienfaits-du-massage', 'site.pages.bienfaits-du-massage')->name('bienfaits-du-massage');
+Route::view('/efficacite', 'site.pages.efficacite')->name('efficacite');
+Route::view('/ingredients-composition', 'site.pages.ingredients-composition')->name('ingredients-composition');
+Route::view('/temoignages', 'site.pages.temoignages')->name('temoignages');
+Route::view('/effet-froid', 'site.pages.effet-froid')->name('effet-froid');
+Route::view('/ingredients-composition', 'site.pages.ingredients-composition')->name('ingredients-composition');
+Route::view('/laboratoire-natur-avignon', 'site.pages.laboratoire-natur-avignon')->name('laboratoire-natur-avignon');
+Route::view('/mentions-legales', 'site.pages.mentions-legales')->name('mentions-legales');
+
+Route::get('/', 'Site\CategoryController@home')->name('home');
 Route::get('/category/{slug}', 'Site\CategoryController@show')->name('category.show');
 Route::get('/product/{slug}', 'Site\ProductController@show')->name('product.show');
+
 
 Route::post('/product/add/cart', 'Site\ProductController@addToCart')->name('product.add.cart');
 Route::get('/cart', 'Site\CartController@getCart')->name('checkout.cart');

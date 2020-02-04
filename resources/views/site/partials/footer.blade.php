@@ -3,36 +3,32 @@
     <div class="container">
         <section class="footer-top padding-top">
             <div class="row">
-                <aside class="col-sm-3 col-md-3 white">
-                    <h5 class="title">Customer Services</h5>
+                <aside class="col-sm-12 col-md-3 white">
+                    <img src="{{ asset('frontend/images/logo-naturavignon.jpg') }}"> 
+                    <p>
+                        Laboratoire NaturAvignon BP 51022 84096 Avignon Cedex 9
+                    </p>
+                </aside>
+                <aside class="col-sm-12  col-md-4 white">
+                    <h5 class="title">Une question ?</h5>
                     <ul class="list-unstyled">
-                        <li> <a href="#">Help center</a></li>
-                        <li> <a href="#">Money refund</a></li>
-                        <li> <a href="#">Terms and Policy</a></li>
-                        <li> <a href="#">Open dispute</a></li>
+                        <li> <a href="#"> FAQ (Foire Aux Questions) </a></li>
+                        <li> <a href="#"> Contact </a></li>
+                        <li> <a href="#"> Service client : 04 88 70 00 25  </a></li>
+                        <li> <a href="#"> Du lundi au vendredi de 9h00 à 17h </a></li>
                     </ul>
                 </aside>
-                <aside class="col-sm-3  col-md-3 white">
-                    <h5 class="title">My Account</h5>
+                <aside class="col-sm-12  col-md-4 white">
+                    <h5 class="title">Argel 7 ®</h5>
                     <ul class="list-unstyled">
-                        <li> <a href="#"> User Login </a></li>
-                        <li> <a href="#"> User register </a></li>
-                        <li> <a href="#"> Account Setting </a></li>
-                        <li> <a href="#"> My Orders </a></li>
-                        <li> <a href="#"> My Wishlist </a></li>
+                        <li> <a href="{{ route('home') }}"> La gamme Argel 7 ® </a></li>
+                        <li> <a href="{{ route('effet-froid') }}"> L'effet froid </a></li>
+                        <li> <a href="{{ route('efficacite') }}"> L'efficacité </a></li>
+                        <li> <a href="{{ route('bienfaits-du-massage') }}"> Les bienfaits du massage </a></li>
+                        <li> <a href="{{ route('temoignages') }}"> Vos témoignages </a></li>
                     </ul>
                 </aside>
-                <aside class="col-sm-3  col-md-3 white">
-                    <h5 class="title">About</h5>
-                    <ul class="list-unstyled">
-                        <li> <a href="#"> Our history </a></li>
-                        <li> <a href="#"> How to buy </a></li>
-                        <li> <a href="#"> Delivery and payment </a></li>
-                        <li> <a href="#"> Advertice </a></li>
-                        <li> <a href="#"> Partnership </a></li>
-                    </ul>
-                </aside>
-                <aside class="col-sm-3">
+                <!-- <aside class="col-sm-3">
                     <article class="white">
                         <h5 class="title">Contacts</h5>
                         <p>
@@ -52,21 +48,21 @@
                                     class="fab fa-twitter  fa-fw"></i></a>
                         </div>
                     </article>
-                </aside>
+                </aside> -->
             </div>
             <!-- row.// -->
             <br>
         </section>
         <section class="footer-bottom row border-top-white">
             <div class="col-sm-6">
-                <p class="text-white-50"> Made with
-                    <3 <br> by Vosidiy M.</p>
+                <p class="text-white-50"> <a href="{{ route('conditions-generales-de-ventes') }}" >Conditions générales de vente</a> | <a href="{{ route('mentions-legales') }}" >Mentions légales</a></p>
+
             </div>
             <div class="col-sm-6">
                 <p class="text-md-right text-white-50">
                     Copyright &copy
                     <br>
-                    <a href="http://bootstrap-ecommerce.com" class="text-white-50">Bootstrap-ecommerce UI kit</a>
+                    <a href="http://bootstrap-ecommerce.com" class="text-white-50">NaturAvignon </a>
                 </p>
             </div>
         </section>

@@ -35,6 +35,6 @@ class ProductController extends Controller
 
         Cart::add(uniqid(), $product->name, $request->input('price'), $request->input('qty'), $options);
 
-        return redirect()->back()->with('message', 'Item added to cart successfully.');
+        return redirect()->back()->with('message', 'Article ajouté au pannier avec succès.');
     }
 }

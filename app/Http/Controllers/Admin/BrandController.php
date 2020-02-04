@@ -29,7 +29,7 @@ class BrandController extends BaseController
     {
         $brands = $this->brandRepository->listBrands();
 
-        $this->setPageTitle('Brands', 'List of all brands');
+        $this->setPageTitle('Marques', 'Liste de toutes les marques');
         return view('admin.brands.index', compact('brands'));
     }
 

@@ -8,6 +8,9 @@ use App\Contracts\CategoryContract;
 use App\Contracts\ProductContract;
 use App\Http\Controllers\BaseController;
 use App\Http\Requests\StoreProductFormRequest;
+use App\Models\Product;
+
+use function Psy\debug;
 
 class ProductController extends BaseController
 {
@@ -31,8 +34,7 @@ class ProductController extends BaseController
     public function index()
     {
         $products = $this->productRepository->listProducts();
-
-        $this->setPageTitle('Products', 'Products List');
+        $this->setPageTitle('Produits', 'Liste des produits');
         return view('admin.products.index', compact('products'));
     }
 

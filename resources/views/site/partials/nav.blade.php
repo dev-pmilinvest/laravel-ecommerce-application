@@ -6,7 +6,20 @@
         </button>
         <div class="collapse navbar-collapse" id="main_nav">
             <ul class="navbar-nav">
-                @foreach($categories as $cat)
+
+          
+
+
+
+
+                       
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('temoignages') }}">Vos témoignages</a>
+                            </li>
+
+
+
+                <!-- @foreach($categories as $cat)
                     @foreach($cat->items as $category)
                         @if ($category->items->count() > 0)
                             <li class="nav-item dropdown">
@@ -24,7 +37,7 @@
                             </li>
                         @endif
                     @endforeach
-                @endforeach
+                @endforeach -->
             </ul>
         </div>
     </div>
